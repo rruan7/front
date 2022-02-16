@@ -143,7 +143,7 @@ class App extends Component {
             <div className="card p-3">
               <div className="mb-4">
                 <button className="btn btn-primary" onClick={this.createItem}>
-                  Add task
+                  Add new task
                 </button>
               </div>
               {this.renderTabList()}
