@@ -8,13 +8,12 @@ export default class PersonalProjects extends Component {
     super(props);
     // set this.state fields
     this.state = {
-      viewCompleted: false, // set to false by default to only view uncompleted items
+      viewCategory: "incomplete", // set to imcomplete by default to only view uncompleted items
       todoList: [],
-      modal: false, // set to false by default (handles task-edit pop-up)
+      modal: false, // set to false by default (handles project pop-up)
       activeItem: {
         title: "",
         description: "",
-        completed: false,
       },
     };
   }
@@ -37,32 +36,37 @@ export default class PersonalProjects extends Component {
     this.setState({ modal: !this.state.modal });
   };
 
-  // helper function to handle editing a new-to task
+  // helper function that triggers modal pop-up for the project item passed in
   displayDetails = (item) => {
     this.setState({ activeItem: item, modal: !this.state.modal });
   };
 
-  // helper function that takes in boolean parameter and sets this.state.viewCompleted to true or false
-  displayCompleted = (status) => {
-    if (status) {
-      return this.setState({ viewCompleted: true });
-    }
-    return this.setState({ viewCompleted: false });
+  // helper function that sets this.state.viewCategory equal to the string parameter passed in
+  displayCategory = (category) => {
+    return this.setState({ viewCategory: category });
   };
 
-  // helper function to render complete/incomplete toggle tab
+  // helper function to render tab toggle
   renderTabList = () => {
     return (
       <div className="nav nav-tabs">
         <span
-          className={this.state.viewCompleted ? "nav-link active" : "nav-link"}
-          onClick={() => this.displayCompleted(true)}
+          className={
+            this.state.viewCategory === "complete"
+              ? "nav-link active"
+              : "nav-link"
+          }
+          onClick={() => this.displayCategory("complete")}
         >
           Complete
         </span>
         <span
-          className={this.state.viewCompleted ? "nav-link" : "nav-link active"}
-          onClick={() => this.displayCompleted(false)}
+          className={
+            this.state.viewCategory === "incomplete"
+              ? "nav-link active"
+              : "nav-link"
+          }
+          onClick={() => this.displayCategory("incomplete")}
         >
           Incomplete
         </span>
@@ -70,31 +74,27 @@ export default class PersonalProjects extends Component {
     );
   };
 
-  // helper function to render main body of to-do task display
+  // helper function to render main body of projects display
   renderItems = () => {
-    const { viewCompleted } = this.state;
-    // for item : todoList, if item.completed equals this.state.viewCompleted, add to newItems
+    const { viewCategory } = this.state;
+    // for item : todoList, if item.category equals this.state.viewCategory, add to newItems
     const newItems = this.state.todoList.filter(
-      (item) => item.completed == viewCompleted
+      (item) => item.category === viewCategory
     );
-    // for item : todoList where item.completed == this.state.viewCompleted...
+    // for item : newItems...
     return newItems.map((item) => (
       <li
         key={item.id}
         className="list-group-item d-flex justify-content-between align-items-center"
       >
         {/* displays item title */}
-        <span
-          className={`todo-title mr-2 ${
-            this.state.viewCompleted ? "completed-todo" : ""
-          }`}
-          title={item.description}
-        >
+        <span className={`todo-title mr-2`} title={item.description}>
           <div className="d-grid gap-3">
             <div className="p-2">
               <b>{item.title}</b>
             </div>
             <div className="p-2">
+              {/* learn more button that triggers modal pop-up */}
               <button
                 className="btn btn-secondary mr-2"
                 onClick={() => this.displayDetails(item)}
@@ -104,8 +104,8 @@ export default class PersonalProjects extends Component {
             </div>
           </div>
         </span>
-        {/* displays edit and delete buttons */}
         <span>
+          {/* displays item image */}
           <img src={item.picture}></img>
         </span>
       </li>
