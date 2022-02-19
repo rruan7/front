@@ -35,48 +35,19 @@ export default class CustomModal extends Component {
     const { toggle, onSave } = this.props;
 
     return (
-      <Modal isOpen={true} toggle={toggle}>
-        <ModalHeader toggle={toggle}>Todo Item</ModalHeader>
+      <Modal size="xl" isOpen={true} toggle={toggle}>
+        <ModalHeader toggle={toggle}>{this.state.activeItem.title}</ModalHeader>
         <ModalBody>
-          <Form>
-            <FormGroup>
-              <Label for="todo-title">Title</Label>
-              <Input
-                type="text"
-                id="todo-title"
-                name="title"
-                value={this.state.activeItem.title}
-                onChange={this.handleChange}
-                placeholder="Enter Todo Title"
-              />
-            </FormGroup>
-            <FormGroup>
-              <Label for="todo-description">Description</Label>
-              <Input
-                type="text"
-                id="todo-description"
-                name="description"
-                value={this.state.activeItem.description}
-                onChange={this.handleChange}
-                placeholder="Enter Todo description"
-              />
-            </FormGroup>
-            <FormGroup check>
-              <Label check>
-                <Input
-                  type="checkbox"
-                  name="completed"
-                  checked={this.state.activeItem.completed}
-                  onChange={this.handleChange}
-                />
-                Completed
-              </Label>
-            </FormGroup>
-          </Form>
+          <div className="d-grid gap-3">
+            <div className="p-2">
+              <b>Description</b>
+            </div>
+            <div className="p-2">{this.state.activeItem.description}</div>
+          </div>
         </ModalBody>
         <ModalFooter>
           <Button color="success" onClick={() => onSave(this.state.activeItem)}>
-            Save
+            Back
           </Button>
         </ModalFooter>
       </Modal>

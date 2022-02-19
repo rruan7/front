@@ -24,7 +24,7 @@ export default class PersonalProjects extends Component {
     this.refreshList();
   }
 
-  // helper function that refreshes to-do list
+  // helper function that refreshes/populates to-do list
   refreshList = () => {
     axios
       .get("/api/projects/")
@@ -37,31 +37,8 @@ export default class PersonalProjects extends Component {
     this.setState({ modal: !this.state.modal });
   };
 
-  // helper function to handle saving edits for to-do tasks
-  handleSubmit = (item) => {
-    this.toggle();
-    if (item.id) {
-      axios
-        .put(`/api/projects/${item.id}/`, item)
-        .then((res) => this.refreshList());
-      return;
-    }
-    axios.post("/api/projects/", item).then((res) => this.refreshList());
-  };
-
-  // helper function to handle deleting a to-do task
-  handleDelete = (item) => {
-    axios.delete(`/api/projects/${item.id}/`).then((res) => this.refreshList());
-  };
-
-  // helper function that handles new to-do task creation
-  createItem = () => {
-    const item = { title: "", description: "", completed: false };
-    this.setState({ activeItem: item, modal: !this.state.modal });
-  };
-
   // helper function to handle editing a new-to task
-  editItem = (item) => {
+  displayDetails = (item) => {
     this.setState({ activeItem: item, modal: !this.state.modal });
   };
 
@@ -113,22 +90,23 @@ export default class PersonalProjects extends Component {
           }`}
           title={item.description}
         >
-          {item.title}
+          <div className="d-grid gap-3">
+            <div className="p-2">
+              <b>{item.title}</b>
+            </div>
+            <div className="p-2">
+              <button
+                className="btn btn-secondary mr-2"
+                onClick={() => this.displayDetails(item)}
+              >
+                Learn more
+              </button>
+            </div>
+          </div>
         </span>
         {/* displays edit and delete buttons */}
         <span>
-          <button
-            className="btn btn-secondary mr-2"
-            onClick={() => this.editItem(item)}
-          >
-            Edit
-          </button>
-          <button
-            className="btn btn-danger"
-            onClick={() => this.handleDelete(item)}
-          >
-            Delete
-          </button>
+          <img src={item.picture}></img>
         </span>
       </li>
     ));
@@ -138,15 +116,10 @@ export default class PersonalProjects extends Component {
   render() {
     return (
       <main className="container">
-        <h1 className="text-white text-uppercase text-center my-4">Todo app</h1>
+        <h1 className="text-black text-uppercase text-center my-4">Projects</h1>
         <div className="row">
-          <div className="col-md-6 col-sm-10 mx-auto p-0">
+          <div className="col">
             <div className="card p-3">
-              <div className="mb-4">
-                <button className="btn btn-primary" onClick={this.createItem}>
-                  Add new task
-                </button>
-              </div>
               {this.renderTabList()}
               <ul className="list-group list-group-flush border-top-0">
                 {this.renderItems()}
@@ -156,11 +129,7 @@ export default class PersonalProjects extends Component {
         </div>
         {/* if this.state.modal == true, display task-edit pop-up */}
         {this.state.modal ? (
-          <Modal
-            activeItem={this.state.activeItem}
-            toggle={this.toggle}
-            onSave={this.handleSubmit}
-          />
+          <Modal activeItem={this.state.activeItem} onSave={this.toggle} />
         ) : null}
       </main>
     );
