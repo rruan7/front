@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Modal from "./Modal";
-import { Button, Form, FormGroup, Input, Label } from "reactstrap";
+import Navigation from "./Router";
 
 export default class PersonalProjects extends Component {
   constructor(props) {
@@ -116,6 +116,7 @@ export default class PersonalProjects extends Component {
   render() {
     return (
       <main className="container">
+        <Navigation />
         <h1 className="text-black text-uppercase text-center my-4">Projects</h1>
         <div className="row">
           <div className="col">

@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-import Modal from "./components/Modal";
-import axios from "axios";
-import PersonalProjects from "./components/ProjectsPage";
+import Home from "./components/HomePage";
 
 class App extends Component {
   constructor(props) {
@@ -14,7 +12,7 @@ class App extends Component {
 
   // main rendering function that renders everything
   render() {
-    return <PersonalProjects />;
+    return <Home />;
   }
 }
 export default App;
