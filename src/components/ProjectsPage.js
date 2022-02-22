@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import http from "../http-common";
 import Modal from "./Modal";
 import Navigation from "./Router";
 
@@ -25,7 +26,7 @@ export default class PersonalProjects extends Component {
 
   // helper function that refreshes/populates to-do list
   refreshList = () => {
-    axios
+    http
       .get("/api/projects/")
       .then((res) => this.setState({ todoList: res.data }))
       .catch((err) => console.log(err));
