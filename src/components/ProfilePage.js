@@ -31,7 +31,7 @@ export default class Profile extends Component {
         <div className="d-flex flex-column">
           {/* INTRODUCTION BLURB */}
           <div className="p-2 col">
-            <div className="d-flex flex-row justify-content-between">
+            <div className="d-flex flex-row flex-wrap justify-content-between">
               <div className="p-2">
                 <h5>
                   I'm Renee (she/her), a first year studying computer science at
@@ -45,7 +45,7 @@ export default class Profile extends Component {
                 </div>
               </div>
               <div className="p-2">
-                <img src={profile} height="400vh"></img>
+                <img src={profile} height="300vh"></img>
               </div>
             </div>
           </div>
