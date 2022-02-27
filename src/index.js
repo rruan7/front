@@ -7,6 +7,7 @@ import reportWebVitals from "./reportWebVitals";
 
 import App from "./App";
 import PersonalProjects from "./components/ProjectsPage";
+import Profile from "./components/ProfilePage";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -14,6 +15,7 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/projects" element={<PersonalProjects />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

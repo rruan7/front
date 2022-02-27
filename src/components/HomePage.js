@@ -16,9 +16,7 @@ export default class Home extends Component {
     return (
       <main className="container">
         <Navigation />
-        <main className="container">
-          <h1 className="text-black text-uppercase text-center my-4">Home</h1>
-        </main>
+        <h1 className="text-black text-uppercase text-center my-4">Home</h1>
         <Outlet />
       </main>
     );

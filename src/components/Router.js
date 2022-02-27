@@ -20,6 +20,11 @@ export default class Navigation extends Component {
             <Link to="/projects">Projects</Link>
           </NavLink>
         </NavItem>
+        <NavItem>
+          <NavLink>
+            <Link to="/profile">About Me</Link>
+          </NavLink>
+        </NavItem>
       </Nav>
     );
   }

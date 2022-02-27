@@ -29,6 +29,7 @@ export default class PersonalProjects extends Component {
     http
       .get("/api/projects/")
       .then((res) => this.setState({ todoList: res.data }))
+      .then(console.log)
       .catch((err) => console.log(err));
   };
 
@@ -82,6 +83,7 @@ export default class PersonalProjects extends Component {
     const newItems = this.state.todoList.filter(
       (item) => item.category === viewCategory
     );
+
     // for item : newItems...
     return newItems.map((item) => (
       <li
