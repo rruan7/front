@@ -1,5 +1,11 @@
-import { Link } from "react-router-dom";
-import { Nav, NavLink, NavItem } from "reactstrap";
+import {
+  Nav,
+  NavLink,
+  NavItem,
+  Navbar,
+  NavbarBrand,
+  Collapse,
+} from "reactstrap";
 import React, { Component } from "react";
 
 export default class Navigation extends Component {
@@ -9,23 +15,21 @@ export default class Navigation extends Component {
 
   render() {
     return (
-      <Nav pill>
-        <NavItem>
-          <NavLink>
-            <Link to="/">Home</Link>
-          </NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink>
-            <Link to="/projects">Projects</Link>
-          </NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink>
-            <Link to="/profile">About Me</Link>
-          </NavLink>
-        </NavItem>
-      </Nav>
+      <Navbar color="dark" dark expand="md">
+        <NavbarBrand href="/">renee's portfolio</NavbarBrand>
+        <Collapse navbar>
+          <Nav className="me-auto" navbar>
+            <NavItem>
+              <NavLink href="/projects">Projects</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavItem>
+                <NavLink href="/profile">About Me</NavLink>
+              </NavItem>
+            </NavItem>
+          </Nav>
+        </Collapse>
+      </Navbar>
     );
   }
 }

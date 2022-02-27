@@ -30,14 +30,19 @@ export default class CustomModal extends Component {
         <ModalBody>
           <div className="d-grid gap-3">
             <div className="p-2">
-              <b>Description</b>
+              <b>Project Description</b>
             </div>
             <div className="p-2">{this.state.activeItem.description}</div>
+            <div className="p-2">
+              <Button outline href={this.state.activeItem.link} target="_blank">
+                Read more
+              </Button>
+            </div>
           </div>
         </ModalBody>
         <ModalFooter>
-          <Button color="success" onClick={() => onSave(this.state.activeItem)}>
-            Back
+          <Button color="danger" onClick={() => onSave(this.state.activeItem)}>
+            Close
           </Button>
         </ModalFooter>
       </Modal>

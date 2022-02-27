@@ -24,30 +24,31 @@ export default class Home extends Component {
   // main rendering function that renders everything
   render() {
     return (
-      <main className="container">
+      <div>
         <Navigation />
-        <h1 className="text-black text-uppercase text-center my-4">Home</h1>
-
-        <Card
-          body
-          style={{
-            backgroundColor: "#FFFFFF",
-            borderColor: "#FFFFFF",
-          }}
-        >
-          <CardBody>
-            <CardTitle tag="h5">Welcome to Renee's Portfolio</CardTitle>
-            <CardSubtitle className="mb-2 text-muted" tag="h6">
-              Thanks for stopping by!
-            </CardSubtitle>
-          </CardBody>
-          <CardImg src={mountain} width="100%" />
-          <CardFooter className="text-muted">
-            Captured on Ira Springs Trail to Mason Lake
-          </CardFooter>
-        </Card>
+        <main className="container">
+          <Card
+            body
+            className="text-center"
+            style={{
+              backgroundColor: "#FFFFFF",
+              borderColor: "#FFFFFF",
+            }}
+          >
+            <CardBody>
+              <CardTitle tag="h5">Welcome to Renee's Portfolio</CardTitle>
+              <CardSubtitle className="mb-2 text-muted" tag="h6">
+                Thanks for stopping by!
+              </CardSubtitle>
+            </CardBody>
+            <CardImg src={mountain} width="100%" />
+            <CardFooter className="text-muted">
+              Captured on Ira Springs Trail to Mason Lake
+            </CardFooter>
+          </Card>
+        </main>
         <Outlet />
-      </main>
+      </div>
     );
   }
 }
