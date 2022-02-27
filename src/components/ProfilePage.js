@@ -34,7 +34,7 @@ export default class Profile extends Component {
             <div className="d-flex flex-row flex-wrap justify-content-between">
               <div className="p-2">
                 <h5>
-                  I'm Renee (she/her), a first year studying computer science at
+                  I'm Renee (she/her), an undergrad studying computer science at
                   UW.
                 </h5>
                 I am a Seattle-native and hold a deep appreciation for the
