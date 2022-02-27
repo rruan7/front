@@ -51,7 +51,7 @@ export default class Profile extends Component {
                     prefer a go-with-the-flow, improvise-on-the-fly approach to
                     cooking and baking (check out my food blog below!) I can't
                     say that all of my projects are a success, but each one
-                    lives close to my heart!
+                    lives close to my heart.
                     <div className="py-3">
                       <h5>Contact me @</h5>
                       reneeruan88@gmail.com
