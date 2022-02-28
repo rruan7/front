@@ -10,7 +10,7 @@ export default class PersonalProjects extends Component {
     super(props);
     // set this.state fields
     this.state = {
-      viewCategory: "incomplete", // set to imcomplete by default to only view uncompleted items
+      viewCategory: "applications", // set to applications by default
       todoList: [],
       modal: false, // set to false by default (handles project pop-up)
       activeItem: {
@@ -56,23 +56,23 @@ export default class PersonalProjects extends Component {
       <div className="nav nav-tabs">
         <span
           className={
-            this.state.viewCategory === "complete"
+            this.state.viewCategory === "mini-projects"
               ? "nav-link active"
               : "nav-link"
           }
-          onClick={() => this.displayCategory("complete")}
+          onClick={() => this.displayCategory("mini-projects")}
         >
-          Complete
+          Mini-Projects
         </span>
         <span
           className={
-            this.state.viewCategory === "incomplete"
+            this.state.viewCategory === "applications"
               ? "nav-link active"
               : "nav-link"
           }
-          onClick={() => this.displayCategory("incomplete")}
+          onClick={() => this.displayCategory("applications")}
         >
-          Incomplete
+          Applications
         </span>
       </div>
     );
