@@ -3,7 +3,7 @@ import axios from "axios";
 import http from "../http-common";
 import Modal from "./Modal";
 import Navigation from "./Router";
-import { Button, Spinner } from "reactstrap";
+import { Button } from "reactstrap";
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 
 export default class PersonalProjects extends Component {
@@ -14,7 +14,6 @@ export default class PersonalProjects extends Component {
       viewCategory: "applications", // set to applications by default
       todoList: [],
       modal: false, // set to false by default (handles project pop-up)
-      loading: true,
       activeItem: {
         title: "",
         description: "",
@@ -36,8 +35,6 @@ export default class PersonalProjects extends Component {
       .then((res) => this.setState({ todoList: res.data }))
       .then(console.log)
       .catch((err) => console.log(err));
-
-    this.setState({ loading: false });
   }
 
   // helper function that sets modal to true if currently false, and vice versa
@@ -122,37 +119,29 @@ export default class PersonalProjects extends Component {
 
   // main rendering function that renders everything
   render() {
-    if (this.state.loading) {
-      return (
+    return (
+      <div>
+        <Navigation />
         <main className="container">
-          <Spinner />
-        </main>
-      );
-    } else {
-      return (
-        <div>
-          <Navigation />
-          <main className="container">
-            <h1 className="text-black text-uppercase text-center my-5">
-              Projects
-            </h1>
-            <div className="row">
-              <div className="col">
-                <div className="card p-3">
-                  {this.renderTabList()}
-                  <ul className="list-group list-group-flush border-top-0">
-                    {this.renderItems()}
-                  </ul>
-                </div>
+          <h1 className="text-black text-uppercase text-center my-5">
+            Projects
+          </h1>
+          <div className="row">
+            <div className="col">
+              <div className="card p-3">
+                {this.renderTabList()}
+                <ul className="list-group list-group-flush border-top-0">
+                  {this.renderItems()}
+                </ul>
               </div>
             </div>
-            {/* if this.state.modal == true, display task-edit pop-up */}
-            {this.state.modal ? (
-              <Modal activeItem={this.state.activeItem} onSave={this.toggle} />
-            ) : null}
-          </main>
-        </div>
-      );
-    }
+          </div>
+          {/* if this.state.modal == true, display task-edit pop-up */}
+          {this.state.modal ? (
+            <Modal activeItem={this.state.activeItem} onSave={this.toggle} />
+          ) : null}
+        </main>
+      </div>
+    );
   }
 }
