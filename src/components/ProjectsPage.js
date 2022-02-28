@@ -17,6 +17,7 @@ export default class PersonalProjects extends Component {
         title: "",
         description: "",
         link: "",
+        image_link: "",
       },
     };
   }

@@ -35,8 +35,11 @@ export default class CustomModal extends Component {
             <div className="p-2">{this.state.activeItem.description}</div>
             <div className="p-2">
               <Button outline href={this.state.activeItem.link} target="_blank">
-                Read more
+                Source code
               </Button>
+            </div>
+            <div className="p-2 my-3">
+              <img src={this.state.activeItem.picture_link} width="100%"></img>
             </div>
           </div>
         </ModalBody>
