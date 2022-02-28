@@ -90,7 +90,7 @@ export default class PersonalProjects extends Component {
     return newItems.map((item) => (
       <li
         key={item.id}
-        className="list-group-item d-flex justify-content-between align-items-center"
+        className="list-group-item d-flex flex-wrap justify-content-between align-items-center"
       >
         {/* displays item title */}
         <span className={`todo-title mr-2`} title={item.description}>
@@ -125,7 +125,7 @@ export default class PersonalProjects extends Component {
           </h1>
           <div className="row">
             <div className="col">
-              <div className="card p-3 flex-wrap">
+              <div className="card p-3">
                 {this.renderTabList()}
                 <ul className="list-group list-group-flush border-top-0">
                   {this.renderItems()}
