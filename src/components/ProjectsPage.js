@@ -4,6 +4,7 @@ import http from "../http-common";
 import Modal from "./Modal";
 import Navigation from "./Router";
 import { Button } from "reactstrap";
+import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 
 export default class PersonalProjects extends Component {
   constructor(props) {
@@ -93,24 +94,25 @@ export default class PersonalProjects extends Component {
         key={item.id}
         className="list-group-item d-flex flex-wrap justify-content-between align-items-center"
       >
-        {/* displays item title */}
-        <span className={`todo-title mr-2`} title={item.description}>
-          <div className="d-grid gap-3">
-            <div className="p-2">
-              <b>{item.title}</b>
-            </div>
-            <div className="p-2">
-              {/* learn more button that triggers modal pop-up */}
-              <Button outline onClick={() => this.displayDetails(item)}>
-                What's this?
-              </Button>
-            </div>
-          </div>
-        </span>
-        <span>
-          {/* displays item image */}
-          <img src={item.picture_link} height="150vh"></img>
-        </span>
+        <MDBContainer>
+          <MDBRow>
+            {/* displays item title */}
+            <MDBCol md="7">
+              <div className="p-2 my-2">
+                <b>{item.title}</b>
+              </div>
+              <div className="p-2 my-5">
+                <Button outline onClick={() => this.displayDetails(item)}>
+                  What's this?
+                </Button>
+              </div>
+            </MDBCol>
+            {/* displays item image */}
+            <MDBCol md="5">
+              <img src={item.picture_link} width="100%"></img>
+            </MDBCol>
+          </MDBRow>
+        </MDBContainer>
       </li>
     ));
   };

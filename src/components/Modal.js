@@ -39,7 +39,7 @@ export default class CustomModal extends Component {
               </Button>
             </div>
             <div className="d-flex p-2 my-4 justify-content-center">
-              <img src={this.state.activeItem.picture_link} width="90%"></img>
+              <img src={this.state.activeItem.picture_link} width="100%"></img>
             </div>
           </div>
         </ModalBody>
