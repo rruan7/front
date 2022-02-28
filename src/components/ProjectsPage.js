@@ -123,7 +123,11 @@ export default class PersonalProjects extends Component {
   // main rendering function that renders everything
   render() {
     if (this.state.loading) {
-      return <Spinner />;
+      return (
+        <main className="container">
+          <Spinner />
+        </main>
+      );
     } else {
       return (
         <div>

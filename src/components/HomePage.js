@@ -15,10 +15,6 @@ import mountain from "./images/mountain.svg";
 export default class Home extends Component {
   constructor(props) {
     super(props);
-    // set this.state fields
-    this.state = {
-      placeholder: false,
-    };
   }
 
   // main rendering function that renders everything
