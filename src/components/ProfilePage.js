@@ -16,6 +16,8 @@ import foodblog from "./images/food-blog.svg";
 import github from "./images/github.svg";
 import linkedin from "./images/linkedin.svg";
 
+/* COMPONENT THAT RENDERS PROFILE PAGE */
+
 export default class Profile extends Component {
   constructor(props) {
     super(props);

@@ -12,6 +12,8 @@ import {
 
 import mountain from "./images/mountain.svg";
 
+/* COMPONENT THAT RENDERS HOMEPAGE */
+
 export default class Home extends Component {
   constructor(props) {
     super(props);

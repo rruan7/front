@@ -6,6 +6,10 @@ import Navigation from "./Router";
 import { Button } from "reactstrap";
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 
+import { trackPromise } from "react-promise-tracker";
+
+/* COMPONENT THAT RENDERS PROJECTS PAGE */
+
 export default class PersonalProjects extends Component {
   constructor(props) {
     super(props);
@@ -14,6 +18,7 @@ export default class PersonalProjects extends Component {
       viewCategory: "applications", // set to applications by default
       todoList: [],
       modal: false, // set to false by default (handles project pop-up)
+      loading: true,
       activeItem: {
         title: "",
         description: "",
@@ -26,15 +31,18 @@ export default class PersonalProjects extends Component {
   // calls the refreshList function every time this component is mounted
   componentDidMount() {
     this.refreshList();
+    this.setState({ loading: false });
   }
 
   // helper function that refreshes/populates to-do list
   async refreshList() {
-    http
-      .get("/api/projects/")
-      .then((res) => this.setState({ todoList: res.data }))
-      .then(console.log)
-      .catch((err) => console.log(err));
+    trackPromise(
+      http
+        .get("/api/projects/")
+        .then((res) => this.setState({ todoList: res.data }))
+        .then(console.log)
+        .catch((err) => console.log(err))
+    );
   }
 
   // helper function that sets modal to true if currently false, and vice versa

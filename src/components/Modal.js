@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 
+/* COMPONENT THAT RENDERS PROJECT POP-UP DESCRIPTION */
+
 export default class CustomModal extends Component {
   constructor(props) {
     super(props);

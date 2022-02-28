@@ -1,13 +1,23 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import reportWebVitals from "./reportWebVitals";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import "./index.css";
-import reportWebVitals from "./reportWebVitals";
+
+import { usePromiseTracker } from "react-promise-tracker";
 
 import App from "./App";
 import PersonalProjects from "./components/ProjectsPage";
 import Profile from "./components/ProfilePage";
+import Loader from "./components/Loader";
+
+// PromiseTracker to take care of loading spinner
+const LoadingIndicator = (props) => {
+  const { promiseInProgress } = usePromiseTracker();
+  return promiseInProgress && <Loader />;
+};
 
 ReactDOM.render(
   <React.StrictMode>
@@ -18,6 +28,7 @@ ReactDOM.render(
         <Route path="/profile" element={<Profile />} />
       </Routes>
     </BrowserRouter>
+    <LoadingIndicator />
   </React.StrictMode>,
   document.getElementById("root")
 );
