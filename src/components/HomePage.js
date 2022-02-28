@@ -38,7 +38,7 @@ export default class Home extends Component {
             <CardBody>
               <CardTitle tag="h5">Welcome to Renee's Portfolio</CardTitle>
               <CardSubtitle className="mb-2 text-muted" tag="h6">
-                Thanks for stopping by!
+                Check out my projects and get to know me!
               </CardSubtitle>
             </CardBody>
             <CardImg src={mountain} width="100%" />
