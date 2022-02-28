@@ -108,7 +108,7 @@ export default class PersonalProjects extends Component {
         </span>
         <span>
           {/* displays item image */}
-          <img src={item.picture_link} height="200vh"></img>
+          <img src={item.picture_link} height="150vh"></img>
         </span>
       </li>
     ));
@@ -125,7 +125,7 @@ export default class PersonalProjects extends Component {
           </h1>
           <div className="row">
             <div className="col">
-              <div className="card p-3">
+              <div className="card p-3 flex-wrap">
                 {this.renderTabList()}
                 <ul className="list-group list-group-flush border-top-0">
                   {this.renderItems()}
