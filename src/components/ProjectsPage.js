@@ -22,7 +22,9 @@ export default class PersonalProjects extends Component {
       activeItem: {
         title: "",
         description: "",
-        link: "",
+        category: "",
+        app_link: "",
+        source_code: "",
         image_link: "",
       },
     };
@@ -117,7 +119,11 @@ export default class PersonalProjects extends Component {
             </MDBCol>
             {/* displays item image */}
             <MDBCol md="5">
-              <img src={item.picture_link} width="100%"></img>
+              <img
+                src={item.picture_link}
+                width="100%"
+                style={{ border: "1px solid black" }}
+              ></img>
             </MDBCol>
           </MDBRow>
         </MDBContainer>

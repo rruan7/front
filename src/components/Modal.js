@@ -1,5 +1,12 @@
 import React, { Component } from "react";
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
+import {
+  Button,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  NavItem,
+} from "reactstrap";
 
 /* COMPONENT THAT RENDERS PROJECT POP-UP DESCRIPTION */
 
@@ -23,6 +30,39 @@ export default class CustomModal extends Component {
     this.setState({ activeItem });
   };
 
+  // function that renders two external link buttons
+  renderButtons() {
+    if (this.state.activeItem.category === "applications") {
+      return (
+        <div className="d-flex flex-row">
+          <Button outline href={this.state.activeItem.app_link} target="_blank">
+            Application Link
+          </Button>
+          <Button
+            className="mx-3"
+            outline
+            href={this.state.activeItem.source_code}
+            target="_blank"
+          >
+            Source code
+          </Button>
+        </div>
+      );
+    } else {
+      return (
+        <div>
+          <Button
+            outline
+            href={this.state.activeItem.source_code}
+            target="_blank"
+          >
+            Source code
+          </Button>
+        </div>
+      );
+    }
+  }
+
   render() {
     const { toggle, onSave } = this.props;
 
@@ -35,13 +75,13 @@ export default class CustomModal extends Component {
               <b>Project Description</b>
             </div>
             <div className="p-2">{this.state.activeItem.description}</div>
-            <div className="p-2">
-              <Button outline href={this.state.activeItem.link} target="_blank">
-                Source code
-              </Button>
-            </div>
+            <div className="p-2">{this.renderButtons()}</div>
             <div className="d-flex p-2 my-4 justify-content-center">
-              <img src={this.state.activeItem.picture_link} width="100%"></img>
+              <img
+                src={this.state.activeItem.picture_link}
+                width="100%"
+                style={{ border: "1px solid black" }}
+              ></img>
             </div>
           </div>
         </ModalBody>
