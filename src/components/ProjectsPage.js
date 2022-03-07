@@ -18,7 +18,6 @@ export default class PersonalProjects extends Component {
       viewCategory: "applications", // set to applications by default
       todoList: [],
       modal: false, // set to false by default (handles project pop-up)
-      loading: true,
       activeItem: {
         title: "",
         description: "",
@@ -33,7 +32,6 @@ export default class PersonalProjects extends Component {
   // calls the refreshList function every time this component is mounted
   componentDidMount() {
     this.refreshList();
-    this.setState({ loading: false });
   }
 
   // helper function that refreshes/populates to-do list
