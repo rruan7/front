@@ -111,7 +111,7 @@ export default class PersonalProjects extends Component {
               <div className="p-2 my-2">
                 <b>{item.title}</b>
               </div>
-              <div className="p-2 my-5">
+              <div className="p-2 my-2">
                 <Button outline onClick={() => this.displayDetails(item)}>
                   What's this?
                 </Button>
@@ -122,8 +122,8 @@ export default class PersonalProjects extends Component {
               <img
                 src={item.picture_link}
                 width="100%"
-                style={{ border: "1px solid black" }}
-                alt={this.state.activeItem.title + " preview"}
+                style={{ border: "1px solid #808080", padding: "5px" }}
+                alt={item.title + " preview"}
               ></img>
             </MDBCol>
           </MDBRow>

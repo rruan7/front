@@ -75,7 +75,7 @@ export default class CustomModal extends Component {
               <img
                 src={this.state.activeItem.picture_link}
                 width="100%"
-                style={{ border: "1px solid black" }}
+                style={{ border: "1px solid #808080", padding: "5px" }}
                 alt={this.state.activeItem.title + " preview"}
               ></img>
             </div>
