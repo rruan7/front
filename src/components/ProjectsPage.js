@@ -123,6 +123,7 @@ export default class PersonalProjects extends Component {
                 src={item.picture_link}
                 width="100%"
                 style={{ border: "1px solid black" }}
+                alt={this.state.activeItem.title + " preview"}
               ></img>
             </MDBCol>
           </MDBRow>

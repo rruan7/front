@@ -1,12 +1,5 @@
 import React, { Component } from "react";
-import {
-  Button,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-  NavItem,
-} from "reactstrap";
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 
 /* COMPONENT THAT RENDERS PROJECT POP-UP DESCRIPTION */
 
@@ -30,13 +23,14 @@ export default class CustomModal extends Component {
     this.setState({ activeItem });
   };
 
-  // function that renders two external link buttons
+  // function that renders buttons
   renderButtons() {
+    // render two buttons if project is an application
     if (this.state.activeItem.category === "applications") {
       return (
         <div className="d-flex flex-row">
           <Button outline href={this.state.activeItem.app_link} target="_blank">
-            Application Link
+            Check it out!
           </Button>
           <Button
             className="mx-3"
@@ -48,6 +42,7 @@ export default class CustomModal extends Component {
           </Button>
         </div>
       );
+      // renders one button if project is not an application
     } else {
       return (
         <div>
@@ -81,6 +76,7 @@ export default class CustomModal extends Component {
                 src={this.state.activeItem.picture_link}
                 width="100%"
                 style={{ border: "1px solid black" }}
+                alt={this.state.activeItem.title + " preview"}
               ></img>
             </div>
           </div>
