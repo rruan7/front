@@ -34,22 +34,20 @@ export default class Navigation extends Component {
         dark
         expand="lg"
       >
-        <div className="d-flex mx-3">
-          <NavbarBrand className="mx-2" href="/">
-            renee's portfolio
-          </NavbarBrand>
-          <NavbarToggler className="me-5" onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="me-auto" navbar>
-              <NavItem>
-                <NavLink href="/projects">Projects</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/profile">About Me</NavLink>
-              </NavItem>
-            </Nav>
-          </Collapse>
-        </div>
+        <NavbarBrand className="mx-2" href="/">
+          renee's portfolio
+        </NavbarBrand>
+        <NavbarToggler className="me-5" onClick={this.toggle} />
+        <Collapse isOpen={this.state.isOpen} navbar>
+          <Nav className="me-auto" navbar>
+            <NavItem>
+              <NavLink href="/projects">Projects</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="/profile">About Me</NavLink>
+            </NavItem>
+          </Nav>
+        </Collapse>
       </Navbar>
     );
   }
