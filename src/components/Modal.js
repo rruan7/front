@@ -69,7 +69,7 @@ export default class CustomModal extends Component {
         >
           {this.state.activeItem.title}
         </ModalHeader>
-        <ModalBody style={{ backgroundColor: "#d4d6d5" }}>
+        <ModalBody style={{ backgroundColor: "#e3e6e4" }}>
           <div className="d-grid gap-3">
             <div className="p-2">
               <b>Project Description</b>
@@ -87,7 +87,7 @@ export default class CustomModal extends Component {
           </div>
         </ModalBody>
         <ModalFooter
-          style={{ backgroundColor: "#d4d6d5", borderColor: "#d4d6d5" }}
+          style={{ backgroundColor: "#e3e6e4", borderColor: "#e3e6e4" }}
         >
           <Button color="danger" onClick={() => onSave(this.state.activeItem)}>
             Close

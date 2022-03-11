@@ -64,14 +64,14 @@ export default class PersonalProjects extends Component {
   renderTabList = () => {
     return (
       <div
-        style={{ backgroundColor: "#d4d6d5", borderColor: "#bbbdbc" }}
+        style={{ backgroundColor: "#e3e6e4", borderColor: "#bbbdbc" }}
         className="nav nav-tabs"
       >
         <span
           style={
             this.state.viewCategory === "mini-projects"
               ? { backgroundColor: "#bbbdbc", borderColor: "grey" }
-              : { backgroundColor: "#d4d6d5", borderColor: "grey" }
+              : { backgroundColor: "#e3e6e4", borderColor: "grey" }
           }
           className={
             this.state.viewCategory === "mini-projects"
@@ -85,7 +85,7 @@ export default class PersonalProjects extends Component {
         <span
           style={
             this.state.viewCategory === "mini-projects"
-              ? { backgroundColor: "#d4d6d5", borderColor: "grey" }
+              ? { backgroundColor: "#e3e6e4", borderColor: "grey" }
               : { backgroundColor: "#bbbdbc", borderColor: "grey" }
           }
           className={
@@ -112,7 +112,7 @@ export default class PersonalProjects extends Component {
     // for item : newItems...
     return newItems.map((item) => (
       <li
-        style={{ backgroundColor: "#d4d6d5" }}
+        style={{ backgroundColor: "#e3e6e4" }}
         key={item.id}
         className="list-group-item d-flex flex-wrap justify-content-between align-items-center"
       >
@@ -157,7 +157,7 @@ export default class PersonalProjects extends Component {
             <div className="col">
               <div
                 className="card p-3 mb-4"
-                style={{ backgroundColor: "#d4d6d5", borderColor: "#bbbdbc" }}
+                style={{ backgroundColor: "#e3e6e4", borderColor: "#bbbdbc" }}
               >
                 {this.renderTabList()}
                 <ul className="list-group list-group-flush border-top-0">
