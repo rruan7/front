@@ -130,7 +130,7 @@ export default class PersonalProjects extends Component {
               </div>
             </MDBCol>
             {/* displays item image */}
-            <MDBCol md="5">
+            <MDBCol md="5" className="my-2">
               <img
                 src={item.picture_link}
                 width="100%"
