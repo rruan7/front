@@ -41,10 +41,10 @@ export default class Navigation extends Component {
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="me-auto" navbar>
             <NavItem>
-              <NavLink href="/projects">Projects</NavLink>
+              <NavLink href="/projects">projects</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/profile">About Me</NavLink>
+              <NavLink href="/profile">about me</NavLink>
             </NavItem>
           </Nav>
         </Collapse>

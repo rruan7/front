@@ -29,12 +29,12 @@ export default class Profile extends Component {
       <div>
         <Navigation />
         <main className="container">
-          <h1 className="text-black text-uppercase text-center my-5">
-            About Me
+          <h1 className="text-center my-5" style={{ color: "#4a4343" }}>
+            about me
           </h1>
           <div className="d-flex flex-column">
             {/* INTRODUCTION BLURB */}
-            <div className="p-2 col">
+            <div className="p-2 col" style={{ color: "#4a4343" }}>
               <MDBContainer>
                 <MDBRow>
                   <MDBCol md="9">
@@ -66,20 +66,20 @@ export default class Profile extends Component {
               </MDBContainer>
             </div>
             {/* SOCIAL MEDIA LINKS */}
-            <div className="p-2 col pb-4">
+            <div className="p-2 col pb-4" style={{ color: "#4a4343" }}>
               <div className="py-3">
                 <h5>Follow me on these platforms!</h5>
               </div>
               <CardGroup>
                 {/* CARD 1 */}
                 <Card
-                  style={{ backgroundColor: "#bbbdbc", borderColor: "grey" }}
+                  style={{ backgroundColor: "#cfd4d1", borderColor: "#bbbdbc" }}
                 >
                   <CardImg src={github} top width="100%" />
                   <CardBody>
                     <CardTitle tag="h5">Github</CardTitle>
                     <CardSubtitle className="mb-2 text-muted" tag="h6">
-                      Projects repository
+                      projects repository.
                     </CardSubtitle>
                     <Button href="https://github.com/rruan7" target="_blank">
                       @rruan7
@@ -88,13 +88,13 @@ export default class Profile extends Component {
                 </Card>
                 {/* CARD 2 */}
                 <Card
-                  style={{ backgroundColor: "#bbbdbc", borderColor: "grey" }}
+                  style={{ backgroundColor: "#cfd4d1", borderColor: "#bbbdbc" }}
                 >
                   <CardImg src={linkedin} top width="100%" />
                   <CardBody>
                     <CardTitle tag="h5">LinkedIn</CardTitle>
                     <CardSubtitle className="mb-2 text-muted" tag="h6">
-                      Experiences and qualifications
+                      experiences and qualifications.
                     </CardSubtitle>
                     <Button
                       href="https://www.linkedin.com/in/renee-ruan-a31779161/"
@@ -106,13 +106,13 @@ export default class Profile extends Component {
                 </Card>
                 {/* CARD 3 */}
                 <Card
-                  style={{ backgroundColor: "#bbbdbc", borderColor: "grey" }}
+                  style={{ backgroundColor: "#cfd4d1", borderColor: "#bbbdbc" }}
                 >
                   <CardImg src={foodblog} top width="100%" />
                   <CardBody>
                     <CardTitle tag="h5">Food Blog</CardTitle>
                     <CardSubtitle className="mb-2 text-muted" tag="h6">
-                      Culinary creations and good eats
+                      culinary creations and good eats.
                     </CardSubtitle>
                     <Button
                       href="https://www.instagram.com/reneesfoodblog/"

@@ -15,11 +15,17 @@ export default class Home extends Component {
       <div>
         <Navigation />
         <main className="container">
-          <div className="d-flex pt-5 justify-content-center">
-            <h1>Welcome to Renee's Portfolio</h1>
+          <div
+            className="d-flex pt-5 justify-content-center"
+            style={{ color: "#4a4343" }}
+          >
+            <h1>welcome to my portfolio.</h1>
           </div>
-          <div className="d-flex justify-content-center">
-            <h3>Check out my projects and get to know me!</h3>
+          <div
+            className="d-flex justify-content-center"
+            style={{ color: "#4a4343" }}
+          >
+            <h3>check out my projects and get to know me!</h3>
           </div>
         </main>
         <Outlet />

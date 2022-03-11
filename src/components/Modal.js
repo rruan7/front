@@ -62,9 +62,14 @@ export default class CustomModal extends Component {
     const { toggle, onSave } = this.props;
 
     return (
-      <Modal size="xl" isOpen={true} toggle={toggle}>
+      <Modal
+        size="xl"
+        isOpen={true}
+        toggle={toggle}
+        style={{ color: "#4a4343" }}
+      >
         <ModalHeader
-          style={{ backgroundColor: "#bbbdbc", borderColor: "grey" }}
+          style={{ backgroundColor: "#cfd4d1", borderColor: "#bbbdbc" }}
           toggle={toggle}
         >
           {this.state.activeItem.title}
@@ -80,7 +85,7 @@ export default class CustomModal extends Component {
               <img
                 src={this.state.activeItem.picture_link}
                 width="100%"
-                style={{ border: "1px solid #808080", padding: "5px" }}
+                style={{ border: "1px solid #bbbdbc", padding: "5px" }}
                 alt={this.state.activeItem.title + " preview"}
               ></img>
             </div>

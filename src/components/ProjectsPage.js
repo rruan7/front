@@ -64,14 +64,14 @@ export default class PersonalProjects extends Component {
   renderTabList = () => {
     return (
       <div
-        style={{ backgroundColor: "#e3e6e4", borderColor: "#bbbdbc" }}
+        style={{ backgroundColor: "#e3e6e4", borderColor: "#cfd4d1" }}
         className="nav nav-tabs"
       >
         <span
           style={
             this.state.viewCategory === "mini-projects"
-              ? { backgroundColor: "#bbbdbc", borderColor: "grey" }
-              : { backgroundColor: "#e3e6e4", borderColor: "grey" }
+              ? { backgroundColor: "#cfd4d1", borderColor: "#bbbdbc" }
+              : { backgroundColor: "#e3e6e4", borderColor: "#bbbdbc" }
           }
           className={
             this.state.viewCategory === "mini-projects"
@@ -85,8 +85,8 @@ export default class PersonalProjects extends Component {
         <span
           style={
             this.state.viewCategory === "mini-projects"
-              ? { backgroundColor: "#e3e6e4", borderColor: "grey" }
-              : { backgroundColor: "#bbbdbc", borderColor: "grey" }
+              ? { backgroundColor: "#e3e6e4", borderColor: "#bbbdbc" }
+              : { backgroundColor: "#cfd4d1", borderColor: "#bbbdbc" }
           }
           className={
             this.state.viewCategory === "applications"
@@ -120,7 +120,7 @@ export default class PersonalProjects extends Component {
           <MDBRow>
             {/* displays item title */}
             <MDBCol md="7">
-              <div className="p-2 my-2">
+              <div className="p-2 my-2" style={{ color: "#4a4343" }}>
                 <b>{item.title}</b>
               </div>
               <div className="p-2 my-2">
@@ -134,7 +134,7 @@ export default class PersonalProjects extends Component {
               <img
                 src={item.picture_link}
                 width="100%"
-                style={{ border: "1px solid #808080", padding: "5px" }}
+                style={{ border: "1px solid #bbbdbc", padding: "5px" }}
                 alt={item.title + " preview"}
               ></img>
             </MDBCol>
@@ -150,14 +150,14 @@ export default class PersonalProjects extends Component {
       <div>
         <Navigation />
         <main className="container">
-          <h1 className="text-black text-uppercase text-center my-5">
-            Projects
+          <h1 className="text-center my-5" style={{ color: "#4a4343" }}>
+            projects
           </h1>
           <div className="row">
             <div className="col">
               <div
                 className="card p-3 mb-4"
-                style={{ backgroundColor: "#e3e6e4", borderColor: "#bbbdbc" }}
+                style={{ backgroundColor: "#e3e6e4", borderColor: "#cfd4d1" }}
               >
                 {this.renderTabList()}
                 <ul className="list-group list-group-flush border-top-0">
