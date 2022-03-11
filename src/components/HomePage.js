@@ -2,6 +2,13 @@ import React, { Component } from "react";
 import Navigation from "./Router";
 import { Outlet } from "react-router-dom";
 
+import {
+  backgroundColor,
+  borderColor,
+  highlightColor,
+  fontColor,
+} from "./Style";
+
 /* COMPONENT THAT RENDERS HOMEPAGE */
 
 export default class Home extends Component {
@@ -17,13 +24,13 @@ export default class Home extends Component {
         <main className="container">
           <div
             className="d-flex pt-5 justify-content-center"
-            style={{ color: "#4a4343" }}
+            style={{ color: fontColor }}
           >
             <h1>welcome to my portfolio.</h1>
           </div>
           <div
             className="d-flex justify-content-center"
-            style={{ color: "#4a4343" }}
+            style={{ color: fontColor }}
           >
             <h3>check out my projects and get to know me!</h3>
           </div>

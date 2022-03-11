@@ -10,6 +10,13 @@ import {
 } from "reactstrap";
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 
+import {
+  backgroundColor,
+  borderColor,
+  highlightColor,
+  fontColor,
+} from "./Style";
+
 import Navigation from "./Router";
 import profile from "./images/profile.svg";
 import foodblog from "./images/food-blog.svg";
@@ -29,12 +36,12 @@ export default class Profile extends Component {
       <div>
         <Navigation />
         <main className="container">
-          <h1 className="text-center my-5" style={{ color: "#4a4343" }}>
+          <h1 className="text-center my-5" style={{ color: fontColor }}>
             about me
           </h1>
           <div className="d-flex flex-column">
             {/* INTRODUCTION BLURB */}
-            <div className="p-2 col" style={{ color: "#4a4343" }}>
+            <div className="p-2 col" style={{ color: fontColor }}>
               <MDBContainer>
                 <MDBRow>
                   <MDBCol md="9">
@@ -66,14 +73,17 @@ export default class Profile extends Component {
               </MDBContainer>
             </div>
             {/* SOCIAL MEDIA LINKS */}
-            <div className="p-2 col pb-4" style={{ color: "#4a4343" }}>
+            <div className="p-2 col pb-4" style={{ color: fontColor }}>
               <div className="py-3">
                 <h5>Follow me on these platforms!</h5>
               </div>
               <CardGroup>
                 {/* CARD 1 */}
                 <Card
-                  style={{ backgroundColor: "#cfd4d1", borderColor: "#bbbdbc" }}
+                  style={{
+                    backgroundColor: highlightColor,
+                    borderColor: borderColor,
+                  }}
                 >
                   <CardImg src={github} top width="100%" />
                   <CardBody>
@@ -88,7 +98,10 @@ export default class Profile extends Component {
                 </Card>
                 {/* CARD 2 */}
                 <Card
-                  style={{ backgroundColor: "#cfd4d1", borderColor: "#bbbdbc" }}
+                  style={{
+                    backgroundColor: highlightColor,
+                    borderColor: borderColor,
+                  }}
                 >
                   <CardImg src={linkedin} top width="100%" />
                   <CardBody>
@@ -106,7 +119,10 @@ export default class Profile extends Component {
                 </Card>
                 {/* CARD 3 */}
                 <Card
-                  style={{ backgroundColor: "#cfd4d1", borderColor: "#bbbdbc" }}
+                  style={{
+                    backgroundColor: highlightColor,
+                    borderColor: borderColor,
+                  }}
                 >
                   <CardImg src={foodblog} top width="100%" />
                   <CardBody>

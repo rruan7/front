@@ -1,5 +1,11 @@
 import React, { Component } from "react";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
+import {
+  backgroundColor,
+  borderColor,
+  highlightColor,
+  fontColor,
+} from "./Style";
 
 /* COMPONENT THAT RENDERS PROJECT POP-UP DESCRIPTION */
 
@@ -66,15 +72,15 @@ export default class CustomModal extends Component {
         size="xl"
         isOpen={true}
         toggle={toggle}
-        style={{ color: "#4a4343" }}
+        style={{ color: fontColor }}
       >
         <ModalHeader
-          style={{ backgroundColor: "#cfd4d1", borderColor: "#bbbdbc" }}
+          style={{ backgroundColor: highlightColor, borderColor: borderColor }}
           toggle={toggle}
         >
           {this.state.activeItem.title}
         </ModalHeader>
-        <ModalBody style={{ backgroundColor: "#e3e6e4" }}>
+        <ModalBody style={{ backgroundColor: backgroundColor }}>
           <div className="d-grid gap-3">
             <div className="p-2">
               <b>Project Description</b>
@@ -85,14 +91,21 @@ export default class CustomModal extends Component {
               <img
                 src={this.state.activeItem.picture_link}
                 width="100%"
-                style={{ border: "1px solid #bbbdbc", padding: "5px" }}
+                style={{
+                  border: "1px solid",
+                  borderColor: borderColor,
+                  padding: "5px",
+                }}
                 alt={this.state.activeItem.title + " preview"}
               ></img>
             </div>
           </div>
         </ModalBody>
         <ModalFooter
-          style={{ backgroundColor: "#e3e6e4", borderColor: "#e3e6e4" }}
+          style={{
+            backgroundColor: backgroundColor,
+            borderColor: backgroundColor,
+          }}
         >
           <Button color="danger" onClick={() => onSave(this.state.activeItem)}>
             Close

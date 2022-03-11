@@ -9,6 +9,13 @@ import {
 } from "reactstrap";
 import React, { Component } from "react";
 
+import {
+  backgroundColor,
+  borderColor,
+  highlightColor,
+  fontColor,
+} from "./Style";
+
 /* COMPONENT THAT RENDERS NAVBAR */
 
 export default class Navigation extends Component {
@@ -30,7 +37,7 @@ export default class Navigation extends Component {
     return (
       <Navbar
         className="py-4"
-        style={{ backgroundColor: "#4a4343", opacity: "0.9" }}
+        style={{ backgroundColor: fontColor, opacity: "0.9" }}
         dark
         expand="lg"
       >

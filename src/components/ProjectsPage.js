@@ -6,6 +6,13 @@ import Navigation from "./Router";
 import { Button } from "reactstrap";
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 
+import {
+  backgroundColor,
+  borderColor,
+  highlightColor,
+  fontColor,
+} from "./Style";
+
 import { trackPromise } from "react-promise-tracker";
 
 /* COMPONENT THAT RENDERS PROJECTS PAGE */
@@ -64,14 +71,23 @@ export default class PersonalProjects extends Component {
   renderTabList = () => {
     return (
       <div
-        style={{ backgroundColor: "#e3e6e4", borderColor: "#cfd4d1" }}
+        style={{
+          backgroundColor: backgroundColor,
+          borderColor: highlightColor,
+        }}
         className="nav nav-tabs"
       >
         <span
           style={
             this.state.viewCategory === "mini-projects"
-              ? { backgroundColor: "#cfd4d1", borderColor: "#bbbdbc" }
-              : { backgroundColor: "#e3e6e4", borderColor: "#bbbdbc" }
+              ? {
+                  backgroundColor: highlightColor,
+                  borderColor: borderColor,
+                }
+              : {
+                  backgroundColor: backgroundColor,
+                  borderColor: borderColor,
+                }
           }
           className={
             this.state.viewCategory === "mini-projects"
@@ -85,8 +101,14 @@ export default class PersonalProjects extends Component {
         <span
           style={
             this.state.viewCategory === "mini-projects"
-              ? { backgroundColor: "#e3e6e4", borderColor: "#bbbdbc" }
-              : { backgroundColor: "#cfd4d1", borderColor: "#bbbdbc" }
+              ? {
+                  backgroundColor: backgroundColor,
+                  borderColor: borderColor,
+                }
+              : {
+                  backgroundColor: highlightColor,
+                  borderColor: borderColor,
+                }
           }
           className={
             this.state.viewCategory === "applications"
@@ -112,7 +134,7 @@ export default class PersonalProjects extends Component {
     // for item : newItems...
     return newItems.map((item) => (
       <li
-        style={{ backgroundColor: "#e3e6e4" }}
+        style={{ backgroundColor: backgroundColor }}
         key={item.id}
         className="list-group-item d-flex flex-wrap justify-content-between align-items-center"
       >
@@ -120,7 +142,7 @@ export default class PersonalProjects extends Component {
           <MDBRow>
             {/* displays item title */}
             <MDBCol md="7">
-              <div className="p-2 my-2" style={{ color: "#4a4343" }}>
+              <div className="p-2 my-2" style={{ color: fontColor }}>
                 <b>{item.title}</b>
               </div>
               <div className="p-2 my-2">
@@ -134,7 +156,11 @@ export default class PersonalProjects extends Component {
               <img
                 src={item.picture_link}
                 width="100%"
-                style={{ border: "1px solid #bbbdbc", padding: "5px" }}
+                style={{
+                  border: "1px solid",
+                  borderColor: borderColor,
+                  padding: "5px",
+                }}
                 alt={item.title + " preview"}
               ></img>
             </MDBCol>
@@ -150,14 +176,17 @@ export default class PersonalProjects extends Component {
       <div>
         <Navigation />
         <main className="container">
-          <h1 className="text-center my-5" style={{ color: "#4a4343" }}>
+          <h1 className="text-center my-5" style={{ color: fontColor }}>
             projects
           </h1>
           <div className="row">
             <div className="col">
               <div
                 className="card p-3 mb-4"
-                style={{ backgroundColor: "#e3e6e4", borderColor: "#cfd4d1" }}
+                style={{
+                  backgroundColor: backgroundColor,
+                  borderColor: highlightColor,
+                }}
               >
                 {this.renderTabList()}
                 <ul className="list-group list-group-flush border-top-0">
