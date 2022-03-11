@@ -28,18 +28,23 @@ export default class Navigation extends Component {
 
   render() {
     return (
-      <Navbar color="dark" dark expand="lg">
-        <NavbarBrand href="/">renee's portfolio</NavbarBrand>
+      <Navbar
+        className="py-4"
+        style={{ backgroundColor: "#4a4343" }}
+        dark
+        expand="lg"
+      >
+        <NavbarBrand className="mx-2" href="/">
+          renee's portfolio
+        </NavbarBrand>
         <NavbarToggler className="me-2" onClick={this.toggle} />
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="me-auto" navbar>
-            <NavItem>
+            <NavItem className="mx-2">
               <NavLink href="/projects">Projects</NavLink>
             </NavItem>
             <NavItem>
-              <NavItem>
-                <NavLink href="/profile">About Me</NavLink>
-              </NavItem>
+              <NavLink href="/profile">About Me</NavLink>
             </NavItem>
           </Nav>
         </Collapse>

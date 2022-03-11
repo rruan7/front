@@ -66,13 +66,15 @@ export default class Profile extends Component {
               </MDBContainer>
             </div>
             {/* SOCIAL MEDIA LINKS */}
-            <div className="p-2 col">
+            <div className="p-2 col pb-4">
               <div className="py-3">
                 <h5>Follow me on these platforms!</h5>
               </div>
               <CardGroup>
                 {/* CARD 1 */}
-                <Card>
+                <Card
+                  style={{ backgroundColor: "#bbbdbc", borderColor: "grey" }}
+                >
                   <CardImg src={github} top width="100%" />
                   <CardBody>
                     <CardTitle tag="h5">Github</CardTitle>
@@ -85,7 +87,9 @@ export default class Profile extends Component {
                   </CardBody>
                 </Card>
                 {/* CARD 2 */}
-                <Card>
+                <Card
+                  style={{ backgroundColor: "#bbbdbc", borderColor: "grey" }}
+                >
                   <CardImg src={linkedin} top width="100%" />
                   <CardBody>
                     <CardTitle tag="h5">LinkedIn</CardTitle>
@@ -101,7 +105,9 @@ export default class Profile extends Component {
                   </CardBody>
                 </Card>
                 {/* CARD 3 */}
-                <Card>
+                <Card
+                  style={{ backgroundColor: "#bbbdbc", borderColor: "grey" }}
+                >
                   <CardImg src={foodblog} top width="100%" />
                   <CardBody>
                     <CardTitle tag="h5">Food Blog</CardTitle>

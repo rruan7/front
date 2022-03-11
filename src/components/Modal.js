@@ -63,8 +63,13 @@ export default class CustomModal extends Component {
 
     return (
       <Modal size="xl" isOpen={true} toggle={toggle}>
-        <ModalHeader toggle={toggle}>{this.state.activeItem.title}</ModalHeader>
-        <ModalBody>
+        <ModalHeader
+          style={{ backgroundColor: "#bbbdbc", borderColor: "grey" }}
+          toggle={toggle}
+        >
+          {this.state.activeItem.title}
+        </ModalHeader>
+        <ModalBody style={{ backgroundColor: "#d4d6d5" }}>
           <div className="d-grid gap-3">
             <div className="p-2">
               <b>Project Description</b>
@@ -81,7 +86,9 @@ export default class CustomModal extends Component {
             </div>
           </div>
         </ModalBody>
-        <ModalFooter>
+        <ModalFooter
+          style={{ backgroundColor: "#d4d6d5", borderColor: "#d4d6d5" }}
+        >
           <Button color="danger" onClick={() => onSave(this.state.activeItem)}>
             Close
           </Button>

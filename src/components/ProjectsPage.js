@@ -63,8 +63,16 @@ export default class PersonalProjects extends Component {
   // helper function to render tab toggle
   renderTabList = () => {
     return (
-      <div className="nav nav-tabs">
+      <div
+        style={{ backgroundColor: "#d4d6d5", borderColor: "#bbbdbc" }}
+        className="nav nav-tabs"
+      >
         <span
+          style={
+            this.state.viewCategory === "mini-projects"
+              ? { backgroundColor: "#bbbdbc", borderColor: "grey" }
+              : { backgroundColor: "#d4d6d5", borderColor: "grey" }
+          }
           className={
             this.state.viewCategory === "mini-projects"
               ? "nav-link active"
@@ -75,6 +83,11 @@ export default class PersonalProjects extends Component {
           Mini-Projects
         </span>
         <span
+          style={
+            this.state.viewCategory === "mini-projects"
+              ? { backgroundColor: "#d4d6d5", borderColor: "grey" }
+              : { backgroundColor: "#bbbdbc", borderColor: "grey" }
+          }
           className={
             this.state.viewCategory === "applications"
               ? "nav-link active"
@@ -99,6 +112,7 @@ export default class PersonalProjects extends Component {
     // for item : newItems...
     return newItems.map((item) => (
       <li
+        style={{ backgroundColor: "#d4d6d5" }}
         key={item.id}
         className="list-group-item d-flex flex-wrap justify-content-between align-items-center"
       >
@@ -141,7 +155,10 @@ export default class PersonalProjects extends Component {
           </h1>
           <div className="row">
             <div className="col">
-              <div className="card p-3">
+              <div
+                className="card p-3 mb-4"
+                style={{ backgroundColor: "#d4d6d5", borderColor: "#bbbdbc" }}
+              >
                 {this.renderTabList()}
                 <ul className="list-group list-group-flush border-top-0">
                   {this.renderItems()}

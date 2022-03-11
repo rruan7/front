@@ -1,16 +1,6 @@
 import React, { Component } from "react";
 import Navigation from "./Router";
 import { Outlet } from "react-router-dom";
-import {
-  Card,
-  CardImg,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-  CardFooter,
-} from "reactstrap";
-
-import mountain from "./images/mountain.svg";
 
 /* COMPONENT THAT RENDERS HOMEPAGE */
 
@@ -25,25 +15,12 @@ export default class Home extends Component {
       <div>
         <Navigation />
         <main className="container">
-          <Card
-            body
-            className="text-center"
-            style={{
-              backgroundColor: "#FFFFFF",
-              borderColor: "#FFFFFF",
-            }}
-          >
-            <CardBody>
-              <CardTitle tag="h5">Welcome to Renee's Portfolio</CardTitle>
-              <CardSubtitle className="mb-2 text-muted" tag="h6">
-                Check out my projects and get to know me!
-              </CardSubtitle>
-            </CardBody>
-            <CardImg src={mountain} width="100%" />
-            <CardFooter className="text-muted">
-              Captured on Ira Springs Trail to Mason Lake
-            </CardFooter>
-          </Card>
+          <div className="d-flex pt-5 justify-content-center">
+            <h1>Welcome to Renee's Portfolio</h1>
+          </div>
+          <div className="d-flex justify-content-center">
+            <h3>Check out my projects and get to know me!</h3>
+          </div>
         </main>
         <Outlet />
       </div>
