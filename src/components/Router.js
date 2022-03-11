@@ -30,7 +30,7 @@ export default class Navigation extends Component {
     return (
       <Navbar
         className="py-4"
-        style={{ backgroundColor: "#4a4343" }}
+        style={{ backgroundColor: "#4a4343", opacity: "0.9" }}
         dark
         expand="lg"
       >
