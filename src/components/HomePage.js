@@ -26,13 +26,15 @@ export default class Home extends Component {
         <main className="container">
           <div className="d-flex flex-column justify-content-center align-items-center pt-4">
             <div style={{ color: fontColor }}>
-              <h1>welcome to my portfolio.</h1>
+              <h1>
+                <b>welcome to my portfolio.</b>
+              </h1>
             </div>
             <div style={{ color: fontColor }}>
               <h3>check out my projects and get to know me!</h3>
             </div>
             <div>
-              <img src={dumpling} width="400vw" height="400vh" />
+              <img src={dumpling} width="100%" height="400vh" />
             </div>
           </div>
         </main>
