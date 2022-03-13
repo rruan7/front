@@ -9,6 +9,8 @@ import {
   fontColor,
 } from "./Style";
 
+import dumpling from "./images/dumpling.svg";
+
 /* COMPONENT THAT RENDERS HOMEPAGE */
 
 export default class Home extends Component {
@@ -22,17 +24,16 @@ export default class Home extends Component {
       <div>
         <Navigation />
         <main className="container">
-          <div
-            className="d-flex pt-5 justify-content-center"
-            style={{ color: fontColor }}
-          >
-            <h1>welcome to my portfolio.</h1>
-          </div>
-          <div
-            className="d-flex justify-content-center"
-            style={{ color: fontColor }}
-          >
-            <h3>check out my projects and get to know me!</h3>
+          <div className="d-flex flex-column justify-content-center align-items-center pt-4">
+            <div style={{ color: fontColor }}>
+              <h1>welcome to my portfolio.</h1>
+            </div>
+            <div style={{ color: fontColor }}>
+              <h3>check out my projects and get to know me!</h3>
+            </div>
+            <div>
+              <img src={dumpling} width="400vw" height="400vh" />
+            </div>
           </div>
         </main>
         <Outlet />
