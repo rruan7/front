@@ -37,7 +37,7 @@ export default class Profile extends Component {
         <Navigation />
         <main className="container">
           <h1 className="text-center my-5" style={{ color: fontColor }}>
-            about me
+            about me.
           </h1>
           <div className="d-flex flex-column">
             {/* INTRODUCTION BLURB */}
@@ -45,10 +45,12 @@ export default class Profile extends Component {
               <MDBContainer>
                 <MDBRow>
                   <MDBCol md="9">
-                    <h5>
-                      I'm Renee (she/her), an undergrad studying computer
-                      science at UW.
-                    </h5>
+                    <h4>
+                      <b>
+                        I'm Renee (she/her), an undergrad studying computer
+                        science at UW.
+                      </b>
+                    </h4>
                     I am a Seattle-native and hold a deep appreciation for the
                     natural landmarks offered by the Pacific Northwest. My
                     favorite trail to hike in the North Bend area is the Ira
@@ -61,9 +63,10 @@ export default class Profile extends Component {
                     cooking and baking (check out my food blog below!) I can't
                     say that all of my projects are a success, but each one
                     lives close to my heart.
-                    <div className="py-3">
-                      <h5>Contact me @</h5>
-                      reneeruan88@gmail.com
+                    <div className="py-4">
+                      <h5>
+                        <i>Contact me @ reneeruan88@gmail.com</i>
+                      </h5>
                     </div>
                   </MDBCol>
                   <MDBCol md="3">
@@ -75,7 +78,9 @@ export default class Profile extends Component {
             {/* SOCIAL MEDIA LINKS */}
             <div className="p-2 col pb-4" style={{ color: fontColor }}>
               <div className="py-3">
-                <h5>Follow me on these platforms!</h5>
+                <h3>
+                  <b>Follow me on these platforms!</b>
+                </h3>
               </div>
               <CardGroup>
                 {/* CARD 1 */}
@@ -87,8 +92,10 @@ export default class Profile extends Component {
                 >
                   <CardImg src={github} top width="100%" />
                   <CardBody>
-                    <CardTitle tag="h5">Github</CardTitle>
-                    <CardSubtitle className="mb-2 text-muted" tag="h6">
+                    <CardTitle tag="h4">
+                      <b>Github</b>
+                    </CardTitle>
+                    <CardSubtitle className="mb-2 text-muted" tag="h5">
                       projects repository.
                     </CardSubtitle>
                     <Button href="https://github.com/rruan7" target="_blank">
@@ -105,8 +112,10 @@ export default class Profile extends Component {
                 >
                   <CardImg src={linkedin} top width="100%" />
                   <CardBody>
-                    <CardTitle tag="h5">LinkedIn</CardTitle>
-                    <CardSubtitle className="mb-2 text-muted" tag="h6">
+                    <CardTitle tag="h4">
+                      <b>LinkedIn</b>
+                    </CardTitle>
+                    <CardSubtitle className="mb-2 text-muted" tag="h5">
                       experiences and qualifications.
                     </CardSubtitle>
                     <Button
@@ -126,8 +135,10 @@ export default class Profile extends Component {
                 >
                   <CardImg src={foodblog} top width="100%" />
                   <CardBody>
-                    <CardTitle tag="h5">Food Blog</CardTitle>
-                    <CardSubtitle className="mb-2 text-muted" tag="h6">
+                    <CardTitle tag="h4">
+                      <b>Food Blog</b>
+                    </CardTitle>
+                    <CardSubtitle className="mb-2 text-muted" tag="h5">
                       culinary creations and good eats.
                     </CardSubtitle>
                     <Button

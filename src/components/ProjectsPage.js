@@ -177,7 +177,7 @@ export default class PersonalProjects extends Component {
         <Navigation />
         <main className="container">
           <h1 className="text-center my-5" style={{ color: fontColor }}>
-            projects
+            projects.
           </h1>
           <div className="row">
             <div className="col">

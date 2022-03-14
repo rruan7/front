@@ -23,7 +23,10 @@ export default class Loader extends Component {
         <main className="container">
           <div
             className="card p-3"
-            style={{ backgroundColor: backgroundColor }}
+            style={{
+              backgroundColor: backgroundColor,
+              borderColor: highlightColor,
+            }}
           >
             <ul className="d-flex my-5 justify-content-center">
               <Spinner />
