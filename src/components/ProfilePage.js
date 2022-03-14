@@ -35,7 +35,7 @@ export default class Profile extends Component {
     return (
       <div>
         <Navigation />
-        <main className="container">
+        <main className="container pb-4">
           <h1 className="text-center my-5" style={{ color: fontColor }}>
             about me.
           </h1>
@@ -45,12 +45,12 @@ export default class Profile extends Component {
               <MDBContainer>
                 <MDBRow>
                   <MDBCol md="9">
-                    <h3>
+                    <h4>
                       <b>
                         I'm Renee (she/her), an undergrad studying computer
                         science at UW.
                       </b>
-                    </h3>
+                    </h4>
                     I am a Seattle-native and hold a deep appreciation for the
                     natural landmarks offered by the Pacific Northwest. My
                     favorite trail to hike in the North Bend area is the Ira
@@ -63,24 +63,24 @@ export default class Profile extends Component {
                     cooking and baking (check out my food blog below!) I can't
                     say that all of my projects are a success, but each one
                     lives close to my heart.
-                    <div className="py-3">
+                    <div className="py-4">
                       <h5>
                         <b>💌 Contact me @ reneeruan88@gmail.com</b>
                       </h5>
                     </div>
                   </MDBCol>
                   <MDBCol md="3">
-                    <img src={profile} height="340vh"></img>
+                    <img src={profile} height="320vh"></img>
                   </MDBCol>
                 </MDBRow>
               </MDBContainer>
             </div>
             {/* SOCIAL MEDIA LINKS */}
-            <div className="p-2 col pb-4" style={{ color: fontColor }}>
+            <div className="p-2 col" style={{ color: fontColor }}>
               <div className="py-3">
-                <h3>
+                <h4>
                   <b>Follow me on these platforms!</b>
-                </h3>
+                </h4>
               </div>
               <CardGroup>
                 {/* CARD 1 */}
@@ -92,11 +92,11 @@ export default class Profile extends Component {
                 >
                   <CardImg src={github} top width="100%" />
                   <CardBody>
-                    <CardTitle tag="h4">
+                    <CardTitle tag="h5">
                       <b>Github</b>
                     </CardTitle>
-                    <CardSubtitle className="mb-2 text-muted" tag="h5">
-                      projects repository.
+                    <CardSubtitle className="mb-3 text-muted" tag="h5">
+                      Projects repository.
                     </CardSubtitle>
                     <Button href="https://github.com/rruan7" target="_blank">
                       @rruan7
@@ -112,11 +112,11 @@ export default class Profile extends Component {
                 >
                   <CardImg src={linkedin} top width="100%" />
                   <CardBody>
-                    <CardTitle tag="h4">
+                    <CardTitle tag="h5">
                       <b>LinkedIn</b>
                     </CardTitle>
-                    <CardSubtitle className="mb-2 text-muted" tag="h5">
-                      experiences and qualifications.
+                    <CardSubtitle className="mb-3 text-muted" tag="h5">
+                      Experiences and qualifications.
                     </CardSubtitle>
                     <Button
                       href="https://www.linkedin.com/in/renee-ruan-a31779161/"
@@ -135,11 +135,11 @@ export default class Profile extends Component {
                 >
                   <CardImg src={foodblog} top width="100%" />
                   <CardBody>
-                    <CardTitle tag="h4">
+                    <CardTitle tag="h5">
                       <b>Food Blog</b>
                     </CardTitle>
-                    <CardSubtitle className="mb-2 text-muted" tag="h5">
-                      culinary creations and good eats.
+                    <CardSubtitle className="mb-3 text-muted" tag="h5">
+                      Culinary creations and good eats.
                     </CardSubtitle>
                     <Button
                       href="https://www.instagram.com/reneesfoodblog/"

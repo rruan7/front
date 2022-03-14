@@ -24,17 +24,15 @@ export default class Home extends Component {
       <div>
         <Navigation />
         <main className="container">
-          <div className="d-flex flex-column justify-content-center align-items-center pt-4">
-            <div style={{ color: fontColor }}>
-              <h1>
-                <b>welcome to my portfolio.</b>
-              </h1>
+          <div className="d-flex flex-column justify-content-center pt-4">
+            <div style={{ color: fontColor }} className="mx-5">
+              <h1>welcome to my portfolio.</h1>
             </div>
-            <div style={{ color: fontColor }}>
-              <h3>check out my projects and get to know me!</h3>
+            <div style={{ color: fontColor }} className="pt-3 mx-auto">
+              <h4>check out my projects and get to know me!</h4>
             </div>
             <div>
-              <img src={dumpling} width="100%" height="400vh" />
+              <img src={dumpling} width="100%" height="350vh" />
             </div>
           </div>
         </main>

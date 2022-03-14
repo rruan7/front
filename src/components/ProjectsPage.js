@@ -96,7 +96,7 @@ export default class PersonalProjects extends Component {
           }
           onClick={() => this.displayCategory("mini-projects")}
         >
-          <h5>Mini-Projects</h5>
+          Mini-Projects
         </span>
         <span
           style={
@@ -117,7 +117,7 @@ export default class PersonalProjects extends Component {
           }
           onClick={() => this.displayCategory("applications")}
         >
-          <h5>Applications</h5>
+          Applications
         </span>
       </div>
     );
@@ -177,7 +177,7 @@ export default class PersonalProjects extends Component {
     return (
       <div>
         <Navigation />
-        <main className="container">
+        <main className="container pb-4">
           <h1 className="text-center my-5" style={{ color: fontColor }}>
             projects.
           </h1>
