@@ -24,11 +24,14 @@ export default class Home extends Component {
       <div>
         <Navigation />
         <main className="container">
-          <div className="d-flex flex-column justify-content-center pt-4">
+          <div className="d-flex flex-column justify-content-center pt-5">
             <div style={{ color: fontColor }} className="mx-5">
               <h1>welcome to my portfolio.</h1>
             </div>
-            <div style={{ color: fontColor }} className="pt-3 mx-auto">
+            <div
+              style={{ color: fontColor, textAlign: "right" }}
+              className="pt-4 mr-5"
+            >
               <h4>check out my projects and get to know me!</h4>
             </div>
             <div>
