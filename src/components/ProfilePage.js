@@ -45,12 +45,12 @@ export default class Profile extends Component {
               <MDBContainer>
                 <MDBRow>
                   <MDBCol md="9">
-                    <h4>
+                    <h3>
                       <b>
                         I'm Renee (she/her), an undergrad studying computer
                         science at UW.
                       </b>
-                    </h4>
+                    </h3>
                     I am a Seattle-native and hold a deep appreciation for the
                     natural landmarks offered by the Pacific Northwest. My
                     favorite trail to hike in the North Bend area is the Ira
@@ -63,14 +63,14 @@ export default class Profile extends Component {
                     cooking and baking (check out my food blog below!) I can't
                     say that all of my projects are a success, but each one
                     lives close to my heart.
-                    <div className="py-4">
+                    <div className="py-3">
                       <h5>
-                        <i>Contact me @ reneeruan88@gmail.com</i>
+                        <b>💌 Contact me @ reneeruan88@gmail.com</b>
                       </h5>
                     </div>
                   </MDBCol>
                   <MDBCol md="3">
-                    <img src={profile} height="300vh"></img>
+                    <img src={profile} height="340vh"></img>
                   </MDBCol>
                 </MDBRow>
               </MDBContainer>

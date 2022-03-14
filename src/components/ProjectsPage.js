@@ -96,7 +96,7 @@ export default class PersonalProjects extends Component {
           }
           onClick={() => this.displayCategory("mini-projects")}
         >
-          Mini-Projects
+          <h5>Mini-Projects</h5>
         </span>
         <span
           style={
@@ -117,7 +117,7 @@ export default class PersonalProjects extends Component {
           }
           onClick={() => this.displayCategory("applications")}
         >
-          Applications
+          <h5>Applications</h5>
         </span>
       </div>
     );
@@ -142,10 +142,12 @@ export default class PersonalProjects extends Component {
           <MDBRow>
             {/* displays item title */}
             <MDBCol md="7">
-              <div className="p-2 my-2" style={{ color: fontColor }}>
-                <b>{item.title}</b>
+              <div className="p-2 my-1" style={{ color: fontColor }}>
+                <h5>
+                  <b>{item.title}</b>
+                </h5>
               </div>
-              <div className="p-2 my-2">
+              <div className="p-2 my-1">
                 <Button outline onClick={() => this.displayDetails(item)}>
                   What's this?
                 </Button>

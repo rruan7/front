@@ -42,7 +42,7 @@ export default class Navigation extends Component {
         expand="lg"
       >
         <NavbarBrand className="mx-2" href="/">
-          renee's portfolio
+          🍋 renee's portfolio
         </NavbarBrand>
         <NavbarToggler className="me-5" onClick={this.toggle} />
         <Collapse isOpen={this.state.isOpen} navbar>
