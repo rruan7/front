@@ -79,6 +79,27 @@ export default class PersonalProjects extends Component {
       >
         <span
           style={
+            this.state.viewCategory === "applications"
+              ? {
+                  backgroundColor: highlightColor,
+                  borderColor: borderColor,
+                }
+              : {
+                  backgroundColor: backgroundColor,
+                  borderColor: borderColor,
+                }
+          }
+          className={
+            this.state.viewCategory === "applications"
+              ? "nav-link active"
+              : "nav-link"
+          }
+          onClick={() => this.displayCategory("applications")}
+        >
+          <text style={{ fontSize: "medium" }}>Applications</text>
+        </span>
+        <span
+          style={
             this.state.viewCategory === "mini-projects"
               ? {
                   backgroundColor: highlightColor,
@@ -96,28 +117,7 @@ export default class PersonalProjects extends Component {
           }
           onClick={() => this.displayCategory("mini-projects")}
         >
-          <h6>Mini-Projects</h6>
-        </span>
-        <span
-          style={
-            this.state.viewCategory === "mini-projects"
-              ? {
-                  backgroundColor: backgroundColor,
-                  borderColor: borderColor,
-                }
-              : {
-                  backgroundColor: highlightColor,
-                  borderColor: borderColor,
-                }
-          }
-          className={
-            this.state.viewCategory === "applications"
-              ? "nav-link active"
-              : "nav-link"
-          }
-          onClick={() => this.displayCategory("applications")}
-        >
-          <h6>Applications</h6>
+          <text style={{ fontSize: "medium" }}>Mini-Projects</text>
         </span>
       </div>
     );
@@ -143,7 +143,9 @@ export default class PersonalProjects extends Component {
             {/* displays item title */}
             <MDBCol md="7">
               <div className="p-2 my-1" style={{ color: fontColor }}>
-                <h5>{item.title}</h5>
+                <h4>
+                  <b>{item.title}</b>
+                </h4>
               </div>
               <div className="p-2 my-1">
                 <Button outline onClick={() => this.displayDetails(item)}>
