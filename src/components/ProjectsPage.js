@@ -143,9 +143,9 @@ export default class PersonalProjects extends Component {
             {/* displays item title */}
             <MDBCol md="7">
               <div className="p-2 my-1" style={{ color: fontColor }}>
-                <h4>
+                <h5>
                   <b>{item.title}</b>
-                </h4>
+                </h5>
               </div>
               <div className="p-2 my-1">
                 <Button outline onClick={() => this.displayDetails(item)}>
