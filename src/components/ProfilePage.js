@@ -86,7 +86,7 @@ export default class Profile extends Component {
                 {/* CARD 1 */}
                 <Card
                   style={{
-                    backgroundColor: highlightColor,
+                    backgroundColor: backgroundColor,
                     borderColor: borderColor,
                   }}
                 >
@@ -98,7 +98,11 @@ export default class Profile extends Component {
                     <CardSubtitle className="mb-3 text-muted" tag="h5">
                       Projects repository.
                     </CardSubtitle>
-                    <Button href="https://github.com/rruan7" target="_blank">
+                    <Button
+                      outline
+                      href="https://github.com/rruan7"
+                      target="_blank"
+                    >
                       @rruan7
                     </Button>
                   </CardBody>
@@ -106,7 +110,7 @@ export default class Profile extends Component {
                 {/* CARD 2 */}
                 <Card
                   style={{
-                    backgroundColor: highlightColor,
+                    backgroundColor: backgroundColor,
                     borderColor: borderColor,
                   }}
                 >
@@ -119,6 +123,7 @@ export default class Profile extends Component {
                       Experiences and qualifications.
                     </CardSubtitle>
                     <Button
+                      outline
                       href="https://www.linkedin.com/in/renee-ruan-a31779161/"
                       target="_blank"
                     >
@@ -129,7 +134,7 @@ export default class Profile extends Component {
                 {/* CARD 3 */}
                 <Card
                   style={{
-                    backgroundColor: highlightColor,
+                    backgroundColor: backgroundColor,
                     borderColor: borderColor,
                   }}
                 >
@@ -142,6 +147,7 @@ export default class Profile extends Component {
                       Culinary creations and good eats.
                     </CardSubtitle>
                     <Button
+                      outline
                       href="https://www.instagram.com/reneesfoodblog/"
                       target="_blank"
                     >

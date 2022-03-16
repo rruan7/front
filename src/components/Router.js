@@ -14,6 +14,7 @@ import {
   borderColor,
   highlightColor,
   fontColor,
+  navColor,
 } from "./Style";
 
 /* COMPONENT THAT RENDERS NAVBAR */
@@ -37,7 +38,10 @@ export default class Navigation extends Component {
     return (
       <Navbar
         className="py-4"
-        style={{ backgroundColor: fontColor, opacity: "0.9" }}
+        style={{
+          backgroundColor: highlightColor,
+          opacity: "0.9",
+        }}
         dark
         expand="lg"
       >

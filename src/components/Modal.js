@@ -75,7 +75,11 @@ export default class CustomModal extends Component {
         style={{ color: fontColor }}
       >
         <ModalHeader
-          style={{ backgroundColor: highlightColor, borderColor: borderColor }}
+          style={{
+            backgroundColor: highlightColor,
+            borderColor: highlightColor,
+            color: backgroundColor,
+          }}
           toggle={toggle}
         >
           {this.state.activeItem.title}
@@ -94,7 +98,6 @@ export default class CustomModal extends Component {
                 style={{
                   border: "1px solid",
                   borderColor: borderColor,
-                  padding: "5px",
                 }}
                 alt={this.state.activeItem.title + " preview"}
               ></img>

@@ -73,7 +73,7 @@ export default class PersonalProjects extends Component {
       <div
         style={{
           backgroundColor: backgroundColor,
-          borderColor: highlightColor,
+          borderColor: borderColor,
         }}
         className="nav nav-tabs"
       >
@@ -96,7 +96,9 @@ export default class PersonalProjects extends Component {
           }
           onClick={() => this.displayCategory("applications")}
         >
-          <text style={{ fontSize: "medium" }}>Applications</text>
+          <text style={{ fontSize: "medium", color: fontColor }}>
+            Applications
+          </text>
         </span>
         <span
           style={
@@ -117,7 +119,9 @@ export default class PersonalProjects extends Component {
           }
           onClick={() => this.displayCategory("mini-projects")}
         >
-          <text style={{ fontSize: "medium" }}>Mini-Projects</text>
+          <text style={{ fontSize: "medium", color: fontColor }}>
+            Mini-Projects
+          </text>
         </span>
       </div>
     );
@@ -158,10 +162,10 @@ export default class PersonalProjects extends Component {
               <img
                 src={item.picture_link}
                 width="100%"
+                height="100%"
                 style={{
                   border: "1px solid",
                   borderColor: borderColor,
-                  padding: "5px",
                 }}
                 alt={item.title + " preview"}
               ></img>
@@ -187,7 +191,7 @@ export default class PersonalProjects extends Component {
                 className="card p-3 mb-4"
                 style={{
                   backgroundColor: backgroundColor,
-                  borderColor: highlightColor,
+                  borderColor: borderColor,
                 }}
               >
                 {this.renderTabList()}
