@@ -45,17 +45,21 @@ export default class Navigation extends Component {
         dark
         expand="lg"
       >
-        <NavbarBrand className="mx-2" href="/">
-          🧷 renee's portfolio
+        <NavbarBrand className="mx-2" href="/" style={{ fontSize: "xx-large" }}>
+          renee's portfolio
         </NavbarBrand>
         <NavbarToggler className="me-5" onClick={this.toggle} />
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="me-auto" navbar>
             <NavItem>
-              <NavLink href="/projects">projects</NavLink>
+              <NavLink href="/projects" style={{ fontSize: "x-large" }}>
+                projects
+              </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/profile">about me</NavLink>
+              <NavLink href="/profile" style={{ fontSize: "x-large" }}>
+                about me
+              </NavLink>
             </NavItem>
           </Nav>
         </Collapse>
