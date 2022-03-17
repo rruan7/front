@@ -35,7 +35,7 @@ export default class Home extends Component {
               <h4>check out my projects and get to know me!</h4>
             </div>
             <div>
-              <img src={bear} width="100%" height="377vh" />
+              <img src={bear} width="100%" height="386vh" />
             </div>
           </div>
         </main>

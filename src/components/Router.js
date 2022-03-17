@@ -39,7 +39,7 @@ export default class Navigation extends Component {
     return (
       <main>
         <Navbar
-          className="pb-0 pt-3"
+          className="pb-0"
           style={{
             backgroundColor: primaryColor,
             opacity: "1.0",
@@ -48,7 +48,7 @@ export default class Navigation extends Component {
           expand="lg"
         >
           <NavbarBrand
-            className="mx-2"
+            className="mx-2 py-3"
             href="/"
             style={{ fontSize: "x-large" }}
           >
@@ -58,10 +58,14 @@ export default class Navigation extends Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/projects">projects</NavLink>
+                <NavLink href="/projects" className="py-3">
+                  projects
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/profile">about me</NavLink>
+                <NavLink href="/profile" className="py-3">
+                  about me
+                </NavLink>
               </NavItem>
             </Nav>
             <img src={bear} width="10%" className="mx-5"></img>
