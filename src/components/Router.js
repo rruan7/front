@@ -39,7 +39,7 @@ export default class Navigation extends Component {
     return (
       <main>
         <Navbar
-          className="py-0"
+          className="pb-0 pt-3"
           style={{
             backgroundColor: primaryColor,
             opacity: "1.0",
