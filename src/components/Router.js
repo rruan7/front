@@ -11,11 +11,12 @@ import React, { Component } from "react";
 
 import {
   backgroundColor,
-  borderColor,
   highlightColor,
-  fontColor,
-  navColor,
+  primaryColor,
+  secondaryColor,
 } from "./Style";
+
+import bear from "./images/bear.svg";
 
 /* COMPONENT THAT RENDERS NAVBAR */
 
@@ -36,34 +37,37 @@ export default class Navigation extends Component {
 
   render() {
     return (
-      <Navbar
-        className="py-4"
-        style={{
-          backgroundColor: highlightColor,
-          opacity: "0.9",
-        }}
-        dark
-        expand="lg"
-      >
-        <NavbarBrand className="mx-2" href="/" style={{ fontSize: "xx-large" }}>
-          renee's portfolio
-        </NavbarBrand>
-        <NavbarToggler className="me-5" onClick={this.toggle} />
-        <Collapse isOpen={this.state.isOpen} navbar>
-          <Nav className="me-auto" navbar>
-            <NavItem>
-              <NavLink href="/projects" style={{ fontSize: "x-large" }}>
-                projects
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/profile" style={{ fontSize: "x-large" }}>
-                about me
-              </NavLink>
-            </NavItem>
-          </Nav>
-        </Collapse>
-      </Navbar>
+      <main>
+        <Navbar
+          className="py-0"
+          style={{
+            backgroundColor: primaryColor,
+            opacity: "1.0",
+          }}
+          dark
+          expand="lg"
+        >
+          <NavbarBrand
+            className="mx-2"
+            href="/"
+            style={{ fontSize: "x-large" }}
+          >
+            renee's portfolio
+          </NavbarBrand>
+          <NavbarToggler className="me-5" onClick={this.toggle} />
+          <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav className="ml-auto" navbar>
+              <NavItem>
+                <NavLink href="/projects">projects</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/profile">about me</NavLink>
+              </NavItem>
+            </Nav>
+            <img src={bear} width="10%" className="mx-5"></img>
+          </Collapse>
+        </Navbar>
+      </main>
     );
   }
 }

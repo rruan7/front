@@ -4,12 +4,12 @@ import { Outlet } from "react-router-dom";
 
 import {
   backgroundColor,
-  borderColor,
   highlightColor,
-  fontColor,
+  primaryColor,
+  secondaryColor,
 } from "./Style";
 
-import dumpling from "./images/dumpling.svg";
+import bear from "./images/bear.svg";
 
 /* COMPONENT THAT RENDERS HOMEPAGE */
 
@@ -25,17 +25,17 @@ export default class Home extends Component {
         <Navigation />
         <main className="container">
           <div className="d-flex flex-column justify-content-center pt-5">
-            <div style={{ color: fontColor }} className="mx-5">
+            <div style={{ color: primaryColor }} className="mx-5">
               <h1>welcome to my portfolio.</h1>
             </div>
             <div
-              style={{ color: fontColor, textAlign: "right" }}
-              className="pt-4 mr-5"
+              style={{ color: primaryColor, textAlign: "right" }}
+              className=" mr-5"
             >
               <h4>check out my projects and get to know me!</h4>
             </div>
             <div>
-              <img src={dumpling} width="100%" height="350vh" />
+              <img src={bear} width="100%" height="393vh" />
             </div>
           </div>
         </main>

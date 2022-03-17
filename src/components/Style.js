@@ -1,7 +1,7 @@
 export const backgroundColor = "#F2F0F0";
 
-export const borderColor = "#ccc0c0";
+export const highlightColor = "#c2bab6";
 
-export const highlightColor = "#BFB4B4";
+export const primaryColor = "#54250d";
 
-export const fontColor = "#8C8181";
+export const secondaryColor = "#00B74A";

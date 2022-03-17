@@ -12,9 +12,9 @@ import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 
 import {
   backgroundColor,
-  borderColor,
   highlightColor,
-  fontColor,
+  primaryColor,
+  secondaryColor,
 } from "./Style";
 
 import Navigation from "./Router";
@@ -36,12 +36,12 @@ export default class Profile extends Component {
       <div>
         <Navigation />
         <main className="container pb-4">
-          <h1 className="text-center my-5" style={{ color: fontColor }}>
+          <h1 className="text-center my-5" style={{ color: primaryColor }}>
             about me.
           </h1>
           <div className="d-flex flex-column">
             {/* INTRODUCTION BLURB */}
-            <div className="p-2 col" style={{ color: fontColor }}>
+            <div className="p-2 col" style={{ color: primaryColor }}>
               <MDBContainer>
                 <MDBRow>
                   <MDBCol md="9">
@@ -70,13 +70,23 @@ export default class Profile extends Component {
                     </div>
                   </MDBCol>
                   <MDBCol md="3">
-                    <img src={profile} height="320vh"></img>
+                    <img
+                      src={profile}
+                      height="320vh"
+                      style={{
+                        boxShadow:
+                          "10px 10px" +
+                          primaryColor +
+                          ", 20px 20px" +
+                          secondaryColor,
+                      }}
+                    ></img>
                   </MDBCol>
                 </MDBRow>
               </MDBContainer>
             </div>
             {/* SOCIAL MEDIA LINKS */}
-            <div className="p-2 col" style={{ color: fontColor }}>
+            <div className="p-2 col" style={{ color: primaryColor }}>
               <div className="py-3">
                 <h4>
                   <b>Follow me on these platforms!</b>
@@ -87,7 +97,6 @@ export default class Profile extends Component {
                 <Card
                   style={{
                     backgroundColor: backgroundColor,
-                    borderColor: borderColor,
                   }}
                 >
                   <CardImg src={github} top width="100%" />
@@ -95,11 +104,11 @@ export default class Profile extends Component {
                     <CardTitle tag="h5">
                       <b>Github</b>
                     </CardTitle>
-                    <CardSubtitle className="mb-3 text-muted" tag="h5">
+                    <CardSubtitle className="mb-3" tag="h5">
                       Projects repository.
                     </CardSubtitle>
                     <Button
-                      outline
+                      color="success"
                       href="https://github.com/rruan7"
                       target="_blank"
                     >
@@ -111,7 +120,6 @@ export default class Profile extends Component {
                 <Card
                   style={{
                     backgroundColor: backgroundColor,
-                    borderColor: borderColor,
                   }}
                 >
                   <CardImg src={linkedin} top width="100%" />
@@ -119,11 +127,11 @@ export default class Profile extends Component {
                     <CardTitle tag="h5">
                       <b>LinkedIn</b>
                     </CardTitle>
-                    <CardSubtitle className="mb-3 text-muted" tag="h5">
+                    <CardSubtitle className="mb-3" tag="h5">
                       Experiences and qualifications.
                     </CardSubtitle>
                     <Button
-                      outline
+                      color="success"
                       href="https://www.linkedin.com/in/renee-ruan-a31779161/"
                       target="_blank"
                     >
@@ -135,7 +143,6 @@ export default class Profile extends Component {
                 <Card
                   style={{
                     backgroundColor: backgroundColor,
-                    borderColor: borderColor,
                   }}
                 >
                   <CardImg src={foodblog} top width="100%" />
@@ -143,11 +150,11 @@ export default class Profile extends Component {
                     <CardTitle tag="h5">
                       <b>Food Blog</b>
                     </CardTitle>
-                    <CardSubtitle className="mb-3 text-muted" tag="h5">
+                    <CardSubtitle className="mb-3" tag="h5">
                       Culinary creations and good eats.
                     </CardSubtitle>
                     <Button
-                      outline
+                      color="success"
                       href="https://www.instagram.com/reneesfoodblog/"
                       target="_blank"
                     >

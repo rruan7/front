@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import {
   backgroundColor,
-  borderColor,
   highlightColor,
-  fontColor,
+  primaryColor,
+  secondaryColor,
 } from "./Style";
 
 /* COMPONENT THAT RENDERS PROJECT POP-UP DESCRIPTION */
@@ -35,12 +35,16 @@ export default class CustomModal extends Component {
     if (this.state.activeItem.category === "applications") {
       return (
         <div className="d-flex flex-row">
-          <Button outline href={this.state.activeItem.app_link} target="_blank">
+          <Button
+            color="success"
+            href={this.state.activeItem.app_link}
+            target="_blank"
+          >
             Check it out!
           </Button>
           <Button
             className="mx-3"
-            outline
+            color="success"
             href={this.state.activeItem.source_code}
             target="_blank"
           >
@@ -52,11 +56,7 @@ export default class CustomModal extends Component {
     } else {
       return (
         <div>
-          <Button
-            outline
-            href={this.state.activeItem.source_code}
-            target="_blank"
-          >
+          <Button href={this.state.activeItem.source_code} target="_blank">
             Source code
           </Button>
         </div>
@@ -72,13 +72,13 @@ export default class CustomModal extends Component {
         size="xl"
         isOpen={true}
         toggle={toggle}
-        style={{ color: fontColor }}
+        style={{ color: primaryColor }}
       >
         <ModalHeader
           style={{
-            backgroundColor: highlightColor,
-            borderColor: highlightColor,
-            color: backgroundColor,
+            backgroundColor: primaryColor,
+            borderColor: primaryColor,
+            color: highlightColor,
           }}
           toggle={toggle}
         >
@@ -95,10 +95,6 @@ export default class CustomModal extends Component {
               <img
                 src={this.state.activeItem.picture_link}
                 width="100%"
-                style={{
-                  border: "1px solid",
-                  borderColor: borderColor,
-                }}
                 alt={this.state.activeItem.title + " preview"}
               ></img>
             </div>

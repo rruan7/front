@@ -3,9 +3,9 @@ import { Spinner } from "reactstrap";
 
 import {
   backgroundColor,
-  borderColor,
   highlightColor,
-  fontColor,
+  primaryColor,
+  secondaryColor,
 } from "./Style";
 
 /* COMPONENT THAT RENDERS LOADING SPINNER */
@@ -25,7 +25,7 @@ export default class Loader extends Component {
             className="card p-3"
             style={{
               backgroundColor: backgroundColor,
-              borderColor: highlightColor,
+              borderColor: backgroundColor,
             }}
           >
             <ul className="d-flex my-5 justify-content-center">

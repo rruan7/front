@@ -8,9 +8,9 @@ import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 
 import {
   backgroundColor,
-  borderColor,
   highlightColor,
-  fontColor,
+  primaryColor,
+  secondaryColor,
 } from "./Style";
 
 import { trackPromise } from "react-promise-tracker";
@@ -73,7 +73,7 @@ export default class PersonalProjects extends Component {
       <div
         style={{
           backgroundColor: backgroundColor,
-          borderColor: borderColor,
+          borderColor: primaryColor,
         }}
         className="nav nav-tabs"
       >
@@ -81,12 +81,12 @@ export default class PersonalProjects extends Component {
           style={
             this.state.viewCategory === "applications"
               ? {
-                  backgroundColor: highlightColor,
-                  borderColor: borderColor,
+                  backgroundColor: primaryColor,
+                  borderColor: primaryColor,
                 }
               : {
                   backgroundColor: backgroundColor,
-                  borderColor: borderColor,
+                  borderColor: primaryColor,
                 }
           }
           className={
@@ -96,7 +96,13 @@ export default class PersonalProjects extends Component {
           }
           onClick={() => this.displayCategory("applications")}
         >
-          <text style={{ fontSize: "medium", color: fontColor }}>
+          <text
+            style={
+              this.state.viewCategory === "applications"
+                ? { fontSize: "medium", color: highlightColor }
+                : { fontSize: "medium", color: primaryColor }
+            }
+          >
             Applications
           </text>
         </span>
@@ -104,12 +110,12 @@ export default class PersonalProjects extends Component {
           style={
             this.state.viewCategory === "mini-projects"
               ? {
-                  backgroundColor: highlightColor,
-                  borderColor: borderColor,
+                  backgroundColor: primaryColor,
+                  borderColor: primaryColor,
                 }
               : {
                   backgroundColor: backgroundColor,
-                  borderColor: borderColor,
+                  borderColor: primaryColor,
                 }
           }
           className={
@@ -119,7 +125,13 @@ export default class PersonalProjects extends Component {
           }
           onClick={() => this.displayCategory("mini-projects")}
         >
-          <text style={{ fontSize: "medium", color: fontColor }}>
+          <text
+            style={
+              this.state.viewCategory === "mini-projects"
+                ? { fontSize: "medium", color: highlightColor }
+                : { fontSize: "medium", color: primaryColor }
+            }
+          >
             Mini-Projects
           </text>
         </span>
@@ -138,7 +150,7 @@ export default class PersonalProjects extends Component {
     // for item : newItems...
     return newItems.map((item) => (
       <li
-        style={{ backgroundColor: backgroundColor }}
+        style={{ backgroundColor: primaryColor }}
         key={item.id}
         className="list-group-item d-flex flex-wrap justify-content-between align-items-center"
       >
@@ -146,28 +158,28 @@ export default class PersonalProjects extends Component {
           <MDBRow>
             {/* displays item title */}
             <MDBCol md="7">
-              <div className="p-2 my-1" style={{ color: fontColor }}>
+              <div className="p-2 pt-5" style={{ color: highlightColor }}>
                 <h5>
                   <b>{item.title}</b>
                 </h5>
               </div>
               <div className="p-2 my-1">
-                <Button outline onClick={() => this.displayDetails(item)}>
+                <Button
+                  color="success"
+                  onClick={() => this.displayDetails(item)}
+                >
                   What's this?
                 </Button>
               </div>
             </MDBCol>
             {/* displays item image */}
-            <MDBCol md="5" className="my-2">
+            <MDBCol md="5" className="my-3">
               <img
                 src={item.picture_link}
                 width="100%"
                 height="100%"
-                style={{
-                  border: "1px solid",
-                  borderColor: borderColor,
-                }}
                 alt={item.title + " preview"}
+                style={{ boxShadow: "7px 7px" + secondaryColor }}
               ></img>
             </MDBCol>
           </MDBRow>
@@ -182,7 +194,7 @@ export default class PersonalProjects extends Component {
       <div>
         <Navigation />
         <main className="container pb-4">
-          <h1 className="text-center my-5" style={{ color: fontColor }}>
+          <h1 className="text-center my-5" style={{ color: primaryColor }}>
             projects.
           </h1>
           <div className="row">
@@ -191,7 +203,7 @@ export default class PersonalProjects extends Component {
                 className="card p-3 mb-4"
                 style={{
                   backgroundColor: backgroundColor,
-                  borderColor: borderColor,
+                  borderColor: backgroundColor,
                 }}
               >
                 {this.renderTabList()}
