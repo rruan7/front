@@ -6,7 +6,7 @@ The frontend for my portfolio was built with [Create React App](https://github.c
 
 The routing for my app is located in the index.js file, and the navigation bar is stylized and rendered as a component in Router.js. 
 
-![Portfolio](https://user-images.githubusercontent.com/71851361/183772169-e4af0f34-9442-4246-a340-e873644e1986.JPG)
+![Portfolio](https://user-images.githubusercontent.com/71851361/183772344-78f71e6d-8033-4f61-8fc3-9322851620ea.JPG)
 
 ## Run App in Development Mode
 
